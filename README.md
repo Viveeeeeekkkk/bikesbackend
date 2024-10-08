@@ -11,6 +11,7 @@
 
 <h2>Description</h2>
 <p>This is a simple Bike Library API built with <strong>Nest.js</strong>. The API allows users to manage a library of bikes, providing functionalities for basic CRUD (Create, Read, Update, Delete) operations. The project follows a modular structure to enhance organization and maintainability.</p>
+<p>(Check below for images...)</p>
 
 <h2>Folder Structure</h2>
 <pre>
