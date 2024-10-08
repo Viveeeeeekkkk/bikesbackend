@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bike Library API</title>
 </head>
 <body>
 
-<h1>Bike Library API</h1>
+<h1>Assignment</h1>
+<h2>Bike Library API</h2>
 
 <h2>Description</h2>
 <p>This is a simple Bike Library API built with <strong>Nest.js</strong>. The API allows users to manage a library of bikes, providing functionalities for basic CRUD (Create, Read, Update, Delete) operations. The project follows a modular structure to enhance organization and maintainability.</p>
@@ -16,11 +16,11 @@
 <pre>
 src/
   bikes/
-    bikes.module.ts       # Contains the BikeModule, registering all bike-related components
+    bikes.module.ts       # Contains the BikeModule
   controllers/
     bikes.controller.ts    # Handles incoming requests and routes for bike operations
   services/
-    bikes.service.ts       # Contains business logic for managing bike data
+    bikes.service.ts       # Contains logic for managing bike data
   dto/
     bike.dto.ts           # Data Transfer Object for validating bike input data
   entities/
@@ -71,6 +71,21 @@ main.ts                    # Entry point of the application
     <li><strong>PUT /bikes/:id</strong>: Update an existing bike.</li>
     <li><strong>DELETE /bikes/:id</strong>: Delete a bike.</li>
 </ul>
+
+<h2>Images</h2>
+<p>Below are some images illustrating the API in action:</p>
+<h4>Swagger UI:</h4>
+<img src="./images/swaggerui.png" alt="Swagger UI" width="600"/>
+<h4>Get Method:</h4>
+<img src="./images/get.png" alt="Get method" width="600"/>
+<h4>Post Method:</h4>
+<img src="./images/post.png" alt="Post method" width="600"/>
+<h4>Put Method:</h4>
+<img src="./images/put.png" alt="Put method" width="600"/>
+<h4>Delete Method:</h4>
+<img src="./images/delete.png" alt="Delete method" width="600"/>
+<h4>Delete - if bike id not found:</h4>
+<img src="./images/delete-notfound.png" alt="Delete not found" width="600"/>
 
 <h2>Technologies Used</h2>
 <ul>
