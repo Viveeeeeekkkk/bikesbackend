@@ -1,5 +1,5 @@
 import { Controller, Get, Post, Body, Put, Param, Delete } from '@nestjs/common';
-import { BikesService } from './bikes.service';
+import { BikesService } from '../services/bikes.service';
 import { CreateBikeDto, UpdateBikeDto } from '../dto/bike.dto'; 
 import { Bike } from '../entities/bike.entity';
 

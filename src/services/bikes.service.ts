@@ -8,32 +8,32 @@ import { CreateBikeDto, UpdateBikeDto } from '../dto/bike.dto';
 export class BikesService {
   constructor(
     @InjectRepository(Bike)
-    private readonly bikeRepository: Repository<Bike>,
+    private readonly bikeInstance: Repository<Bike>,
   ) {}
 
   async getBikes(): Promise<Bike[]> {
-    return this.bikeRepository.find(); 
+    return this.bikeInstance.find(); 
   }
 
   async create(createBikeDto: CreateBikeDto): Promise<Bike> {
-    const bike = this.bikeRepository.create(createBikeDto); 
-    return this.bikeRepository.save(bike); 
+    const bike = this.bikeInstance.create(createBikeDto); 
+    return this.bikeInstance.save(bike); 
   }
 
   async update(id: string, updateBikeDto: UpdateBikeDto): Promise<Bike> {
-    const bike = await this.bikeRepository.findOne({ where: { id } }); 
+    const bike = await this.bikeInstance.findOne({ where: { id } }); 
     if (!bike) {
       throw new NotFoundException(`Bike not found`); 
     }
     Object.assign(bike, updateBikeDto); 
-    return this.bikeRepository.save(bike); 
+    return this.bikeInstance.save(bike); 
   }
 
   async remove(id: string): Promise<void> {
-    const bike = await this.bikeRepository.findOne({ where: { id } }); 
+    const bike = await this.bikeInstance.findOne({ where: { id } }); 
     if (!bike) {
       throw new NotFoundException(`Bike not found`); 
     }
-    await this.bikeRepository.remove(bike); 
+    await this.bikeInstance.remove(bike); 
   }
 }
